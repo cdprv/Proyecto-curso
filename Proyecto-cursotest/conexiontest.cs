@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 using Proyectofuncion;
 using Xunit;
 
-namespace Proyecto_cursotest
+namespace Proyectofunciontest
 {
     public class Conexiontest
     {

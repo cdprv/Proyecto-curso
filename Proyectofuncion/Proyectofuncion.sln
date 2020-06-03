@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyectofuncion", "Proyectofuncion.csproj", "{27204B10-9EE1-486E-9F32-16CC83FE47BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proyectofuncion", "Proyectofuncion.csproj", "{27204B10-9EE1-486E-9F32-16CC83FE47BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto-cursotest", "..\Proyecto-cursotest\Proyecto-cursotest.csproj", "{4E5CE71D-3084-47C8-B885-A2F0F4D33830}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proyectofunciontest", "..\Proyecto-cursotest\Proyectofunciontest.csproj", "{4E5CE71D-3084-47C8-B885-A2F0F4D33830}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

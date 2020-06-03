@@ -7,6 +7,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace Proyectofuncion
 {
@@ -29,5 +30,27 @@ namespace Proyectofuncion
                 ? (ActionResult)new OkObjectResult($"Hello, {name}")
                 : new BadRequestObjectResult("Please pass a name on the query string or in the request body");
         }
+    }
+
+    public class Nueva
+    {
+        public string Do()
+        {
+            
+            var storageAcoount = new Conexion().Create();
+            var blobClient = storageAcoount.CreateCloudBlobClient();
+            var container = blobClient.GetContainerReference("imagenes");
+
+            SharedAccessBlobPolicy adHocPolicy = new SharedAccessBlobPolicy()
+            {
+                SharedAccessExpiryTime = System.DateTime.UtcNow.AddHours(1),
+                Permissions = SharedAccessBlobPermissions.Read | SharedAccessBlobPermissions.List
+            };
+
+            var sas = container.GetSharedAccessSignature(adHocPolicy, "imagenes");
+
+            return sas;
+        }
+
     }
 }
